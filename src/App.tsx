@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
 
-import { GetPlayerStats } from "./libs/BrawlAPI";
+import { GetPlayerStats, GetPlayerRankedStats } from "./libs/BrawlAPI";
 import PlayerList, { IPlayer } from "./libs/Team";
 
 import logo from './logo.svg';

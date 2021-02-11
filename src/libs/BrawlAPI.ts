@@ -1,4 +1,4 @@
-import { ILegend, IAll_Player_Stats } from './Interfaces'
+import { ILegend, IAll_Player_Stats, IRanked_Player_Stats } from './Interfaces'
 
 const URLAPI = 'https://api.brawlhalla.com'
 const PLAYER = '/player'
@@ -26,6 +26,24 @@ export const GetPlayerStats = async (userID: number) : Promise<IAll_Player_Stats
     })
 
     return userStats
+}
+
+export const GetPlayerRankedStats = async (userID: number) : Promise<IRanked_Player_Stats | null> => {
+    const fetchURL: string = URLAPI + PLAYER + '/' + userID + RANKED + API_KEY + apiKey
+
+    let userRankedStats: IRanked_Player_Stats | null = null
+
+    await fetch(`${fetchURL}`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        }
+    }).then((response) => response.json())
+    .then((response: IRanked_Player_Stats) => {
+        userRankedStats = response
+    })
+
+    return userRankedStats
 }
 
 export const GetAllLegends = async () : Promise<ILegend[] | null> => {
