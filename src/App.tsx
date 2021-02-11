@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components'
+
+import { GetPlayerStats } from "./libs/BrawlAPI";
+import PlayerList, { IPlayer } from "./libs/Team";
+
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const Init = async () => {
+    PlayerList.forEach( async (player: IPlayer) => {
+      const playerStats = await GetPlayerStats(player.id);
+      console.log(playerStats);
+    });
+  }
+
+  useEffect(() => {
+    Init();
+  });
+
   return (
     <div className="App">
       <header className="App-header">
