@@ -11,6 +11,19 @@ export interface ILegend {
     speed: number
 }
 
+export interface IBrawlSquadPlayer {
+    name: string
+    username: string
+    xp: number,
+    level: number,
+    wins: number
+    games: number
+    brawlhalla_id: number
+    rating: number
+    peak_rating: number
+    tier: string
+}
+
 export interface IClan {
     clan_name: string
     clan_id: number
