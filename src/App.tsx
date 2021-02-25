@@ -23,6 +23,7 @@ function App() {
           xp: playerStats.xp,
           level: playerStats.level,
           wins: playerRankedStats.wins,
+          winrate: playerRankedStats.wins / playerRankedStats.games,
           games: playerRankedStats.games,
           brawlhalla_id: player.id,
           rating: playerRankedStats.rating,

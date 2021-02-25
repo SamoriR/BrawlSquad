@@ -14,10 +14,11 @@ export interface ILegend {
 export interface IBrawlSquadPlayer {
     name: string
     username: string
-    xp: number,
-    level: number,
+    xp: number
+    level: number
     wins: number
     games: number
+    winrate: number
     brawlhalla_id: number
     rating: number
     peak_rating: number
