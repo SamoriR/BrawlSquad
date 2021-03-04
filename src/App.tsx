@@ -50,7 +50,7 @@ function App() {
         }
         
         console.log(brawlSquadPlayerStats);
-        squadArray.push(brawlSquadPlayerStats)
+        // squadArray.push(brawlSquadPlayerStats)
       }
     });
 
