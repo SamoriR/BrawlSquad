@@ -25,49 +25,42 @@ const initPlayerState : IBrawlSquadPlayer = {
 }
 
 function App() {
-  const [squad, setSquad] = useState([initPlayerState]);
-
-  const Init = async () => {
-    let squadArray: IBrawlSquadPlayer[] = []
-
-    PlayerList.forEach( async (player: IPlayer) => {
-      const playerStats : IAll_Player_Stats | null = await GetPlayerStats(player.id)
-      const playerRankedStats : IRanked_Player_Stats | null = await GetPlayerRankedStats(player.id)
-
-      if (playerStats != null && playerRankedStats != null) {
-        let brawlSquadPlayerStats : IBrawlSquadPlayer = {
-          name: player.name,
-          username: playerStats.name,
-          xp: playerStats.xp,
-          level: playerStats.level,
-          wins: playerRankedStats.wins,
-          winrate: playerRankedStats.wins / playerRankedStats.games,
-          games: playerRankedStats.games,
-          brawlhalla_id: player.id,
-          rating: playerRankedStats.rating,
-          peak_rating: playerRankedStats.peak_rating,
-          tier: playerRankedStats.tier
-        }
-        
-        console.log(brawlSquadPlayerStats);
-        // squadArray.push(brawlSquadPlayerStats)
-      }
-    });
-
-    // setSquad(squadArray)
-    console.log(squad)
-  }
-
   useEffect(() => {
-    Init();
   });
+
+  let squadArray: IBrawlSquadPlayer[] = []
+
+  PlayerList.forEach( async (player: IPlayer) => {
+    const playerStats : IAll_Player_Stats | null = await GetPlayerStats(player.id)
+    const playerRankedStats : IRanked_Player_Stats | null = await GetPlayerRankedStats(player.id)
+
+    if (playerStats != null && playerRankedStats != null) {
+      let brawlSquadPlayerStats : IBrawlSquadPlayer = {
+        name: player.name,
+        username: playerStats.name,
+        xp: playerStats.xp,
+        level: playerStats.level,
+        wins: playerRankedStats.wins,
+        winrate: playerRankedStats.wins / playerRankedStats.games,
+        games: playerRankedStats.games,
+        brawlhalla_id: player.id,
+        rating: playerRankedStats.rating,
+        peak_rating: playerRankedStats.peak_rating,
+        tier: playerRankedStats.tier
+      }
+      
+      squadArray.push(brawlSquadPlayerStats)
+    }
+  });
+
+  console.log(squadArray)
 
   return (
     <div className="App">
       <header className="App-header">
         {
-          squad.map((squadMember: IBrawlSquadPlayer, index: number) =>
-            <p> name: { squadMember.name } username: { squadMember.username } winrate: { squadMember.winrate } rating: { squadMember.rating } peak rating: { squadMember.peak_rating }</p>
+          squadArray.map((squadMember: IBrawlSquadPlayer, index: number) =>
+            <p key={index}> name: { squadMember.name } username: { squadMember.username } winrate: { squadMember.winrate } rating: { squadMember.rating } peak rating: { squadMember.peak_rating }</p>
           )
         }
       </header>
