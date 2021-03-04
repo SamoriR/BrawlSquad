@@ -55,6 +55,7 @@ function App() {
     });
 
     setSquad(squadArray)
+    console.log(squad)
   }
 
   useEffect(() => {
