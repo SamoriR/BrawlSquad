@@ -54,7 +54,7 @@ function App() {
       }
     });
 
-    setSquad(squadArray)
+    // setSquad(squadArray)
     console.log(squad)
   }
 
