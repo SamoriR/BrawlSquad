@@ -14,7 +14,7 @@ const GeneralStatsTile = (props: IGeneralStatsTileProps) => {
 
     const { data, error } = useFetch(`https://api.brawlhalla.com/player/${id}/stats?api_key=${apiKey}`, {
         headers: { 
-            "Content-Type": "application/x-www-form-urlencoded",
+            ContentType: "application/x-www-form-urlencoded",
             Accept: "application/json"
         }
     })

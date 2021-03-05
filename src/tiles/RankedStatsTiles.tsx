@@ -12,7 +12,10 @@ const RankedStatsTile = (props: IRankedStatsTileProps) => {
     const { id } = props
 
     const { data, error } = useFetch(`https://api.brawlhalla.com/player/${id}/ranked?api_key=${apiKey}`, {
-        headers: { "Content-Type": "application/x-www-form-urlencoded" }
+        headers: { 
+            ContentType: "application/x-www-form-urlencoded",
+            Accept: "application/json"
+        }
     })
 
     const statsData: IRanked_Player_Stats = data as IRanked_Player_Stats
