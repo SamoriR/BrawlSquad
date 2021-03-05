@@ -21,6 +21,7 @@ const GeneralStatsTile = (props: IGeneralStatsTileProps) => {
     if (error) return (<p>{error.message}</p>)
     if (!data) return (<p>loading</p>)
 
+    console.log(data)
     return (
         <div>{ "name: " + name + " username: " + statsData.name + " level: " + statsData.level + " xp: " + statsData.xp }</div>
     )
