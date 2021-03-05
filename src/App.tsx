@@ -3,9 +3,7 @@ import styled from 'styled-components'
 import GeneralStatsTile from "./tiles/GeneralStatsTile"
 import RankedStatsTile from "./tiles/RankedStatsTiles"
 
-
 import PlayerList, { IPlayer } from "./libs/Team";
-import './App.css';
 
 
 const AppContainer = styled.div`
