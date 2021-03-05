@@ -56,11 +56,10 @@ function App() {
 
   return (
     <AppContainer>
-      <header className="App-header">
+        <div>Hey</div>
         { squadArray.map((squadMember: IBrawlSquadPlayer, index: number) => (
             <div key={index}> name: { squadMember.name } username: { squadMember.username } winrate: { squadMember.winrate } rating: { squadMember.rating } peak rating: { squadMember.peak_rating }</div>
         ))}
-      </header>
     </AppContainer>
   );
 }
