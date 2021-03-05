@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components'
 
 import { GetPlayerStats, GetPlayerRankedStats } from "./libs/BrawlAPI";
@@ -10,19 +10,18 @@ import PlayerList, { IPlayer } from "./libs/Team";
 import logo from './logo.svg';
 import './App.css';
 
-const initPlayerState : IBrawlSquadPlayer = {
-  name: '',
-  username: '',
-  xp: 0,
-  level: 0,
-  wins: 0,
-  winrate: 0,
-  games: 0,
-  brawlhalla_id: 0,
-  rating: 0,
-  peak_rating: 0,
-  tier: ''
-}
+
+const AppContainer = styled.div`
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+`
+
 
 function App() {
   useEffect(() => {
@@ -56,15 +55,13 @@ function App() {
   console.log(squadArray)
 
   return (
-    <div className="App">
+    <AppContainer>
       <header className="App-header">
-        {
-          squadArray.map((squadMember: IBrawlSquadPlayer, index: number) =>
-            <p key={index}> name: { squadMember.name } username: { squadMember.username } winrate: { squadMember.winrate } rating: { squadMember.rating } peak rating: { squadMember.peak_rating }</p>
-          )
-        }
+        { squadArray.map((squadMember: IBrawlSquadPlayer, index: number) => (
+            <div key={index}> name: { squadMember.name } username: { squadMember.username } winrate: { squadMember.winrate } rating: { squadMember.rating } peak rating: { squadMember.peak_rating }</div>
+        ))}
       </header>
-    </div>
+    </AppContainer>
   );
 }
 
