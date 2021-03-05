@@ -58,7 +58,7 @@ function App() {
     <AppContainer>
         <div>Hey</div>
         { squadArray.map((squadMember: IBrawlSquadPlayer, index: number) => (
-            <div key={index}>{ "name: " + squadMember.name + " username: " + squadMember.username + " winrate: " + squadMember.winrate + " rating: " + squadMember.rating + " peak rating: " + squadMember.peak_rating }</div>
+            <div key={index}> Lol what </div>
         ))}
     </AppContainer>
   );
