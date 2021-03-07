@@ -7,13 +7,16 @@ const apiKey: string | undefined = process.env.REACT_APP_BRAWL_KEY
 
 const GeneralStatsContainer = styled.div`
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 `
 
 const NameDiv = styled.div`
     min-width: 400px;
+`
+
+const LevelExpContainerDiv = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 `
 
 const LevelDiv = styled.div`
@@ -47,8 +50,10 @@ const GeneralStatsTile = (props: IGeneralStatsTileProps) => {
     return (
         <GeneralStatsContainer>
             <NameDiv>{ name + " (" + statsData.name + ")" }</NameDiv>
-            <LevelDiv>{ "level: " + statsData.level }</LevelDiv>
-            <ExpDiv>{ " xp: " + statsData.xp }</ExpDiv>
+            <LevelExpContainerDiv>
+                <LevelDiv>{ "level: " + statsData.level }</LevelDiv>
+                <ExpDiv>{ " xp: " + statsData.xp }</ExpDiv>
+            </LevelExpContainerDiv>
         </GeneralStatsContainer>
     )
 }

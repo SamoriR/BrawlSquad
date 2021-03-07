@@ -3,10 +3,11 @@ import styled from 'styled-components'
 import GeneralStatsTile from "./GeneralStatsTile"
 import RankedStatsTile from "./RankedStatsTiles"
 
-const CardContainer = styled.div`
+const PlayerCardContainer = styled.div`
     width: 100%;
     background-color: #292932;
     margin-bottom: 16px;
+    padding: 16px;
 `
 
 interface IPlayerCardProps {
@@ -18,10 +19,10 @@ const PlayerCard = (props: IPlayerCardProps) => {
     const { id, name } = props
 
     return (
-        <CardContainer>
+        <PlayerCardContainer>
             <GeneralStatsTile id={id} name={name} />
 			<RankedStatsTile id={id} />
-        </CardContainer>
+        </PlayerCardContainer>
     )
 }
 
