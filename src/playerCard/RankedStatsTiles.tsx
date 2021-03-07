@@ -13,6 +13,26 @@ const RankedStatsContainer = styled.div`
     justify-content: space-between;
 `
 
+const TierDiv = styled.div`
+    min-width: 130px;
+`
+
+const RatingDiv = styled.div`
+    min-width: 150px;
+`
+
+const PRatingDiv = styled.div`
+    min-width: 210px;
+`
+
+const WinDiv = styled.div`
+    min-width: 140px;
+`
+
+const WinRateDiv = styled.div`
+    min-width: 180px;
+`
+
 interface IRankedStatsTileProps {
     id: number
 }
@@ -42,11 +62,11 @@ const RankedStatsTile = (props: IRankedStatsTileProps) => {
 
     return (
         <RankedStatsContainer>
-            <div>{ statsData.tier }</div>
-            <div>{ "rating: " + statsData.rating }</div>
-            <div>{ "peak rating: " + statsData.peak_rating }</div>
-            <div>{ "wins: " + statsData.wins }</div>
-            <div>{ "winrate: " + toPercentage(statsData.wins / statsData.games) }</div>
+            <TierDiv>{ statsData.tier }</TierDiv>
+            <RatingDiv>{ "rating: " + statsData.rating }</RatingDiv>
+            <PRatingDiv>{ "peak rating: " + statsData.peak_rating }</PRatingDiv>
+            <WinDiv>{ "wins: " + statsData.wins }</WinDiv>
+            <WinRateDiv>{ "winrate: " + toPercentage(statsData.wins / statsData.games) }</WinRateDiv>
         </RankedStatsContainer>
     )
 }
