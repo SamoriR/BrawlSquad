@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components'
-import GeneralStatsTile from "./tiles/GeneralStatsTile"
-import RankedStatsTile from "./tiles/RankedStatsTiles"
+import PlayerCard from './playerCard/PlayerCard'
 
 import PlayerList, { IPlayer } from "./libs/Team";
 
@@ -28,10 +27,7 @@ const App = () => {
 			<div>Samori is sexy af</div>
 			{ 
 				PlayerList.map((player: IPlayer, index: number) => (
-					<>
-						<GeneralStatsTile key={index} id={player.id} name={player.name} />
-						<RankedStatsTile key={index} id={player.id} />
-					</>
+					<PlayerCard id={player.id} name={player.name}/>
 				))
 			}
 		</AppContainer>
