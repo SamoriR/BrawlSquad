@@ -5,7 +5,8 @@ import RankedStatsTile from "./RankedStatsTiles"
 
 const CardContainer = styled.div`
     width: 100%;
-    padding-bottom: 32px;
+    background-color: #292932;
+    margin-bottom: 16px;
 `
 
 interface IPlayerCardProps {

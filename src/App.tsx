@@ -6,7 +6,7 @@ import PlayerList, { IPlayer } from "./libs/Team";
 
 
 const AppContainer = styled.div`
-	background-color: #282c34;
+	background-color: #1d1d22;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
