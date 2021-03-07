@@ -42,7 +42,7 @@ const RankedStatsTile = (props: IRankedStatsTileProps) => {
 
     return (
         <RankedStatsContainer>
-            <div>{ "tier: " + statsData.tier }</div>
+            <div>{ statsData.tier }</div>
             <div>{ "rating: " + statsData.rating }</div>
             <div>{ "peak rating: " + statsData.peak_rating }</div>
             <div>{ "wins: " + statsData.wins }</div>
