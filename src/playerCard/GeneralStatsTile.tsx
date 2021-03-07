@@ -2,6 +2,7 @@ import React from 'react';
 import { useFetch } from "react-async"
 import styled from 'styled-components'
 import { IAll_Player_Stats } from "../libs/Interfaces";
+import FontDiv from './FontDiv'
 
 const apiKey: string | undefined = process.env.REACT_APP_BRAWL_KEY
 
@@ -9,7 +10,8 @@ const GeneralStatsContainer = styled.div`
     width: 100%;
 `
 
-const NameDiv = styled.div`
+const NameDiv = styled(FontDiv)`
+    font-size: 20px;
     min-width: 400px;
 `
 
