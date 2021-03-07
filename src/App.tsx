@@ -24,7 +24,7 @@ const App = () => {
 
 	return (
 		<AppContainer>
-			<div>Samori is sexy af</div>
+			<div>Remember to thank Samori's sexy ass for makign this</div>
 			{ 
 				PlayerList.map((player: IPlayer, index: number) => (
 					<PlayerCard id={player.id} name={player.name}/>

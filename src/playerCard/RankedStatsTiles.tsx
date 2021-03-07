@@ -1,6 +1,7 @@
 import React from 'react';
 import { useFetch } from "react-async"
 import styled from 'styled-components'
+import FontDiv from './FontDiv'
 
 import { IRanked_Player_Stats } from "../libs/Interfaces";
 
@@ -13,23 +14,28 @@ const RankedStatsContainer = styled.div`
     justify-content: space-between;
 `
 
-const TierDiv = styled.div`
+const TierDiv = styled(FontDiv)`
+    font-size: 24px;
     min-width: 130px;
 `
 
-const RatingDiv = styled.div`
+const RatingDiv = styled(FontDiv)`
+    font-size: 24px;
     min-width: 150px;
 `
 
-const PRatingDiv = styled.div`
+const PRatingDiv = styled(FontDiv)`
+    font-size: 24px;
     min-width: 210px;
 `
 
-const WinDiv = styled.div`
+const WinDiv = styled(FontDiv)`
+    font-size: 24px;
     min-width: 140px;
 `
 
-const WinRateDiv = styled.div`
+const WinRateDiv = styled(FontDiv)`
+    font-size: 24px;
     min-width: 180px;
 `
 

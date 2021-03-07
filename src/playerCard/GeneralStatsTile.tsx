@@ -11,7 +11,7 @@ const GeneralStatsContainer = styled.div`
 `
 
 const NameDiv = styled(FontDiv)`
-    font-size: 20px;
+    font-size: 32px;
     min-width: 400px;
 `
 
@@ -22,12 +22,14 @@ const LevelExpContainerDiv = styled.div`
     margin-top: 8px;
 `
 
-const LevelDiv = styled.div`
+const LevelDiv = styled(FontDiv)`
+    font-size: 24px;
     min-width: 120px;
     margin-bottom: 4px;
 `
 
-const ExpDiv = styled.div`
+const ExpDiv = styled(FontDiv)`
+    font-size: 24px;
     min-width: 170px;
 `
 
