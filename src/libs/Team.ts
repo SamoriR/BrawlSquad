@@ -9,6 +9,10 @@ const PlayerList: IPlayer[] = [
         name: 'Julian Hutson'
     },
     {
+        id: 25873331,
+        name: 'Hasani Hendrix'
+    },
+    {
         id: 25821087,
         name: 'Torre Barnes'
     },
@@ -17,21 +21,18 @@ const PlayerList: IPlayer[] = [
         name: 'Darian Nwankwo'
     },
     {
-        id: 25873331,
-        name: 'Hasani Hendrix'
-    },
-    {
         id: 39473080,
         name: 'Samori Roberts'
     },
     {
-        id: 25819613,
-        name: 'Zane Whitfield'
-    },
-    {
         id: 42118542,
         name: 'Xavier Bonner'
+    },
+    {
+        id: 25819613,
+        name: 'Zane Whitfield'
     }
+
 ]
 
 export default PlayerList
