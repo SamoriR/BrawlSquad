@@ -1,10 +1,10 @@
 import React from 'react';
-import { useFetch } from "react-async"
 import styled from 'styled-components'
 import GeneralStatsTile from "./GeneralStatsTile"
 import RankedStatsTile from "./RankedStatsTiles"
 
 const CardContainer = styled.div`
+    width: 100%;
     padding-bottom: 16px;
 `
 

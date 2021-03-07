@@ -12,6 +12,17 @@ const GeneralStatsContainer = styled.div`
     justify-content: space-between;
 `
 
+const NameDiv = styled.div`
+    min-width: 400px;
+`
+
+const LevelDiv = styled.div`
+    min-width: 120px;
+`
+
+const ExpDiv = styled.div`
+    min-width: 170px;
+`
 
 interface IGeneralStatsTileProps {
     id: number
@@ -35,9 +46,9 @@ const GeneralStatsTile = (props: IGeneralStatsTileProps) => {
 
     return (
         <GeneralStatsContainer>
-            <div>{ name + " (" + statsData.name + ")" }</div>
-            <div>{ "level: " + statsData.level }</div>
-            <div>{ " xp: " + statsData.xp }</div>
+            <NameDiv>{ name + " (" + statsData.name + ")" }</NameDiv>
+            <LevelDiv>{ "level: " + statsData.level }</LevelDiv>
+            <ExpDiv>{ " xp: " + statsData.xp }</ExpDiv>
         </GeneralStatsContainer>
     )
 }
