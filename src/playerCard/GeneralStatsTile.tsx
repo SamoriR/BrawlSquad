@@ -11,7 +11,7 @@ const GeneralStatsContainer = styled.div`
 `
 
 const NameDiv = styled(FontDiv)`
-    font-size: 32px;
+    font-size: 28px;
     min-width: 400px;
 `
 
