@@ -8,6 +8,8 @@ const PlayerCardContainer = styled.div`
     background-color: #292932;
     margin-bottom: 16px;
     padding: 16px;
+
+    border-radius: 8px;
 `
 
 interface IPlayerCardProps {

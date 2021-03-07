@@ -17,10 +17,12 @@ const LevelExpContainerDiv = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 8px;
 `
 
 const LevelDiv = styled.div`
     min-width: 120px;
+    margin-bottom: 4px;
 `
 
 const ExpDiv = styled.div`

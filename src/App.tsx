@@ -14,8 +14,8 @@ const AppContainer = styled.div`
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
 	color: white;
-	padding-left: 16px;
-	padding-right: 16px;
+	padding-left: 32px;
+	padding-right: 32px;
 `
 
 const App = () => {
